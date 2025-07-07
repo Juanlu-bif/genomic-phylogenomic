@@ -20,4 +20,20 @@ Los archivos de extensión yml para la creación de los entornos se encuentran e
 4. quast.yml
 5. V-pipe.yml
 
-## **Genomic Assembly & benchmarking**
+# **GENOMIC ASSEMBLY & BENCHMARKING**
+
+
+## Instalación PipeCoV
+
+## Instalación ViralRecon
+
+## Instalación V-pipe
+
+## Ensamblaje PipeCoV
+
+
+## Ensamblaje ViralRecon
+
+## Ensamblaje V-pipe
+
+## BENCHMARKING
