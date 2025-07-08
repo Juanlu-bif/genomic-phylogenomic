@@ -84,13 +84,13 @@ Estos comandos recogen la ejecución general que se llevó a cabo para la limpie
 Para la ejecución de Vpipe se llevaron a cabo los pasos descritos en su repositorio de github y documentación: <https://cbg-ethz.github.io/V-pipe/>. Para ejecución de esta pipeline, lo más importante es su jerarquía de directorios, para que su ejecución no lance errores, o genere errores en los archivos. A continuación, se describen los comandos para la ejecución de Vpipe, pero al igual que en las otros 2 pipelines anteriores, serán los comandos principales y representativos de la ejecución de la pipeline. Todo el proceso de ejecución se encuentra recogido en el script "vpipe.sh", en la carpeta scripts.
 Recuerda que es necesario activar el entorno vpipe de forma previa a su ejecución.
 
-      #Configuración del archivo "config.yml"
+      1. Configuración del archivo "config.yml"
       
-      ./vpipe --dryrun --cores 2
+      2. ./vpipe --dryrun --cores 2
       
-      #Modificación manual de la samples.tsv generada 
+      3. Modificación manual de la samples.tsv generada 
 
-      ./vpipe -p --cores 5 --conda-frontend conda
+      4. ./vpipe -p --cores 5 --conda-frontend conda
 
 ## BENCHMARKING
 
