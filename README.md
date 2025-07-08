@@ -56,6 +56,29 @@ Estos comandos recogen la ejecución general que se llevó a cabo para el proces
 
 ## Ensamblaje ViralRecon
 
+La ejecución de ViralRecon fue llevada a cabo tal y como se indica en su documentación, teniendo en cuenta que una de las carreras de secuenciación utilizadas fue secuenciada mediante amplicones, y la otra mediante WGS o Whole Genome Sequencing. Esto es importante para la ejecución de esta pipeline, puesto que hay que elegir entre dos protocolos a la hora de ejecutarla, "amplicon" o "metagenomic". En el caso de que la estrategia de secuenciación haya sido WGS, entonces utilizaremos el protocolo "metagenomic".
+
+Para el uso de ambos protocolos, viralrecon facilita la descarga de un script de python que permite la preparación de la "samplesheet" necesaria para la ejecución de esta pipeline:
+
+      wget -L https://raw.githubusercontent.com/nf-core/viralrecon/master/bin/fastq_dir_to_samplesheet.py
+
+
+### Protocolo **"amplicon"**:
+
+En este caso es importante descargar previamente el archivo bed que contiene los adaptadores de los amplicones, tal como se recoge en la memoria del trabajo.
+
+      python3 fastq_dir_to_samplesheet.py /directorio/fastqs viralrecon_samplesheet.csv -r1 _1.fastq.gz -r2 _2.fastq.gz -sn -sd _ -si 1
+
+      nextflow run nf-core/viralrecon --input viralrecon_samplesheet.csv --outdir viralrecon_output --platform illumina --genome 'MN908947.3' --protocol amplicon --primer_bed file_adapters_amplicon.bed -profile docker
+
+### **Protocolo "metagenomic"**:
+
+      python3 fastq_dir_to_samplesheet.py /directorio/fastqs viralrecon_samplesheet.csv -r1 _1.fastq.gz -r2 _2.fastq.gz -sn -sd _ -si 1
+
+      nextflow run nf-core/viralrecon --input viralrecon_samplesheet.csv --outdir viralrecon_output --platform illumina --genome 'MN908947.3' --protocol metagenomic -profile docker
+
+Estos comandos recogen la ejecución general que se llevó a cabo para la limpieza de lecturas y el ensamblaje. Todos los comandos utilizados se recogen en el script "viralrecon.sh", encontrado en la carpeta de scripts.
+
 ## Ensamblaje V-pipe
 
 ## BENCHMARKING
