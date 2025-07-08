@@ -105,5 +105,26 @@ Para esta comparación, también se elaboraron 2 scripts en bash. Uno de ellos p
 
 # PHYLOGENOMIC
 
+En este apartado se recoge el procedimiento utilizado para llevar a cabo la elaboración del árbol filogenético que muestre la relación evolutiva de los ensamblajes llevados acabo con PipeCoV y otros 12 genomas más recogidos en la carpeta _____
+Para llevar a cabo este proceso, se utilizaron secuencias de genomas completos.
+
+      #1. Activación del entorno conda. 
+      conda activate phylogenomic
+
+      #2. Generación matriz con todos los genomas
+      cat *fasta > multifasta.fasta
+
+      #3. Alineamiento de genomas
+      mafft --auto --thread 5 multifasta.fasta > phylomatrix.fasta
+
+      #4. Limpieza de alineamiento
+      trimal -in phylomatrix.fasta -out phylomatrix_clean.fasta -noallgaps -automated1 -htmlout summary_trimal.html
+
+      #5. Elaboración del árbol con iqtree
+      iqtree -s phylomatrix_clean.fasta --seqtype DNA --mem 8G -T 5 -m MFP -B 1000 --nmax 1000 --nstep 100 --prefix sarscov2
+
+La ejecución de iqtree generará varios archivos con diferentes extensiones. El archivo con extensión .treefile lo utilizamos para mostrarlo en iTOL web (<https://itol.embl.de/>) para visualizar el árbol y poder descargarlo.
+
+El script de ejecución de este proceso se encuentra en la carpeta scripts, denominado como "phylogenomic_tree.sh".
 
 
