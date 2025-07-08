@@ -26,7 +26,7 @@ Los archivos de extensión yml para la creación de los entornos se encuentran e
 
 ## Instalación PipeCoV
 
-'git clone https://github.com/alvesrco/pipecov.git'
+`git clone https://github.com/alvesrco/pipecov.git`
 
 ## Instalación ViralRecon
 
