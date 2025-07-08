@@ -94,3 +94,14 @@ Recuerda que es necesario activar el entorno vpipe de forma previa a su ejecuci�
 
 ## BENCHMARKING
 
+Para la comparación entre las 3 pipelines, se generaron 3 scripts en python, que permitieron comparar la longitud de los consensos obtenidos por las distintas pipelines frente al genoma de referencia, el número de bases indeterminadas de cada consenso (n), y el número de SNP encontrados por cada pipeline tanto antes como después de un proceso de filtrado de variantes. 
+Todos estos script elaborados en python se encuentran en la carpeta scripts, y se encuentra perfectamente recogido su uso y función. Estos scripts, generan cada uno dos archivos, uno en formato pdf, y otro en formato png, que recogen el gráfico comparativo de las 3 pipelines. 
+Para esta comparación, también se elaboraron 2 scripts en bash. Uno de ellos para el filtrado de la variantes detectadas por las pipelines ("filter_vcf.sh", y se ejecutaba de forma previa a la visualización de la comparativa de variantes entre pipelines. El otro, era de uso esclusivo para los datos obtenidos por la pipeline PipeCoV, permitiendo obtener las variantes detectadas por esta pipeline ("get_vcf.sh), puesto que la misma, no lleva a cabo la llamada de variantes, hecho que marca una cierta desventaja frente a las otras dos. Su uso se lleva a cabo de forma prevía a todos los otros 4 script mencionados, puesto que su ejecución es necesaria para la obtención de las variantes que se pueden detectar por la pipeline PipeCoV.
+
+**Es importante resaltar que, los scripts recogidos en la carpeta script, son enumerados y explicados por orden de ejecución dentro del trabajo.
+
+
+# PHYLOGENOMIC
+
+
+
