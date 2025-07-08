@@ -1,4 +1,4 @@
-En este directorio encontramos los script elaborados en python para llevar a cabo las comparaciones entre las diferentes pipepines.
+En este directorio encontramos los script elaborados en python y bash para llevar a cabo las comparaciones entre las diferentes pipepines.
 
 
 1. genome_comparison_long.py
