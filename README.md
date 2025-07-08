@@ -56,7 +56,7 @@ Estos comandos recogen la ejecución general que se llevó a cabo para el proces
 
 ## Ensamblaje ViralRecon
 
-La ejecución de ViralRecon fue llevada a cabo tal y como se indica en su documentación, teniendo en cuenta que una de las carreras de secuenciación utilizadas fue secuenciada mediante amplicones, y la otra mediante WGS o Whole Genome Sequencing. Esto es importante para la ejecución de esta pipeline, puesto que hay que elegir entre dos protocolos a la hora de ejecutarla, "amplicon" o "metagenomic". En el caso de que la estrategia de secuenciación haya sido WGS, entonces utilizaremos el protocolo "metagenomic".
+La ejecución de ViralRecon fue llevada a cabo tal y como se indica en su documentación (<https://github.com/nf-core/viralrecon>), teniendo en cuenta que una de las carreras de secuenciación utilizadas fue secuenciada mediante amplicones, y la otra mediante WGS o Whole Genome Sequencing. Esto es importante para la ejecución de esta pipeline, puesto que hay que elegir entre dos protocolos a la hora de ejecutarla, "amplicon" o "metagenomic". En el caso de que la estrategia de secuenciación haya sido WGS, entonces utilizaremos el protocolo "metagenomic".
 
 Para el uso de ambos protocolos, viralrecon facilita la descarga de un script de python que permite la preparación de la "samplesheet" necesaria para la ejecución de esta pipeline:
 
@@ -81,4 +81,16 @@ Estos comandos recogen la ejecución general que se llevó a cabo para la limpie
 
 ## Ensamblaje V-pipe
 
+Para la ejecución de Vpipe se llevaron a cabo los pasos descritos en su repositorio de github y documentación: <https://cbg-ethz.github.io/V-pipe/>. Para ejecución de esta pipeline, lo más importante es su jerarquía de directorios, para que su ejecución no lance errores, o genere errores en los archivos. A continuación, se describen los comandos para la ejecución de Vpipe, pero al igual que en las otros 2 pipelines anteriores, serán los comandos principales y representativos de la ejecución de la pipeline. Todo el proceso de ejecución se encuentra recogido en el script "vpipe.sh", en la carpeta scripts.
+Recuerda que es necesario activar el entorno vpipe de forma previa a su ejecución.
+
+      #Configuración del archivo "config.yml"
+      
+      ./vpipe --dryrun --cores 2
+      
+      #Modificación manual de la samples.tsv generada 
+
+      ./vpipe -p --cores 5 --conda-frontend conda
+
 ## BENCHMARKING
+
