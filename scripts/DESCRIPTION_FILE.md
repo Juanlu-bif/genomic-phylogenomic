@@ -1,6 +1,18 @@
 En este directorio encontramos los script elaborados en python y bash para llevar a cabo los diferentes pasos del trabajo, además de recoger las condiciones específicas en las que se ha ejecutado cada paso, es decir, recoge los comandos concretos ejecutados.
 
-### 1. **genome_comparison_long.py**
+### 1. **pipecov.sh**
+
+
+### 2. **get_vcf.sh**
+
+
+### 3. **viralrecon.sh**
+
+
+### 4. **vpipe.sh**
+
+
+### 5. **genome_comparison_long.py**
 
   Para ejecutar este archivo es necesario tener en un mismo directorio el genoma de referencia de la especie (en este caso el SARS-CoV-2) y la secuencia consenso obtenida con cada pipeline (en este caso PipeCoV, V-pipe y Viralrecon).
   
@@ -12,7 +24,7 @@ En este directorio encontramos los script elaborados en python y bash para lleva
       
       `python3 genome_comparison_long.py`
 
-### 2. **count_n_bases.py**
+### 6. **count_n_bases.py**
 
   Para ejecutar este archivo es necesario tener en un mismo directorio el genoma de referencia de la especie (en este caso el SARS-CoV-2) y la secuencia consenso obtenida con cada pipeline (en este caso PipeCoV, V-pipe y Viralrecon).
   
@@ -24,7 +36,12 @@ En este directorio encontramos los script elaborados en python y bash para lleva
       
       `python3 count_n_bases.py`
 
-### 3. **vcf_analysis.py**
+
+### 7. **filter_vcf.sh**
+
+
+
+### 8. **vcf_analysis.py**
 
   Para ejecutar este archivo es necesario tener en un mismo directorio el genoma de referencia de la especie (en este caso el SARS-CoV-2) y el archivo de variantes obtenido con cada pipeline (en este caso PipeCoV, V-pipe y Viralrecon).
   
@@ -38,10 +55,12 @@ En este directorio encontramos los script elaborados en python y bash para lleva
   
   En el caso de este script, se utilizó no solo para comparar las variantes, si no para comparar las variantes tras el filtrado de las mismas. Para ello, se filtraron las variantes con el scritp "filter_vcf.sh", concretamente utilizando bcftools filter, y los archivos vcf filtrados se renombraron para que coincidieran con el formato de nombre necesario para la ejecución de este script.
 
-### 4. **filter_vcf.sh**
+### 9. **filter_vcf.sh**
 
    Script utilizado para llevar a cabo el filtrado de variantes de los archivos vcf obtenidos de las diferentes pipelines. Es importante tener en cuenta a la hora de utilizarlo los directorios y hacer los cambios correspondientes. En el se recogen las condiciones de filtrado utilizadas para los vcf generados por las distintas pipelines.
 
    Ejecución: Para ejecutarlo es necesario dar a este script permisos de ejecución, activar el entorno conda donde se haya instalado bcftools (en este caso, <biosoftwares>) y posteriormente lanzarlo para que se ejecute.
 
    `sudo chmod u+x filter_vcf.sh; ./filter_vcf.sh`
+
+
