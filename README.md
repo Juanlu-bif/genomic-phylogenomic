@@ -19,17 +19,31 @@ Los archivos de extensión yml para la creación de los entornos se encuentran e
 3. phylogenomic.yml
 4. quast.yml
 5. V-pipe.yml
+6. nextflow.yml
 
 # **GENOMIC ASSEMBLY & BENCHMARKING**
 
 
 ## Instalación PipeCoV
 
+'git clone https://github.com/alvesrco/pipecov.git'
+
 ## Instalación ViralRecon
+
+Instalación desde conda, con el fin de crear un entorno aislado para evitar modificaciones en las dependencias de la maquina virtual utilizada.
+
+conda env create -f nextflow.yml
 
 ## Instalación V-pipe
 
+Instalación desde conda, con el fin de crear un entorno aislado para evitar modificaciones en las dependencias de la maquina virtual utilizada.
+
+conda env create -f V-pipe.yml
+curl -O 'https://raw.githubusercontent.com/cbg-ethz/V-pipe/master/utils/quick_install.sh'
+./quick_install.sh -w work
+
 ## Ensamblaje PipeCoV
+
 
 
 ## Ensamblaje ViralRecon
