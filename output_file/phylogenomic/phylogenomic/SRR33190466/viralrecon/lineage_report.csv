@@ -1,0 +1,2 @@
+taxon,lineage,conflict,ambiguity_score,scorpio_call,scorpio_support,scorpio_conflict,scorpio_notes,version,pangolin_version,scorpio_version,constellation_version,is_designated,qc_status,qc_notes,note
+SRR33190466 MN908947.3,XEC,0.0,,Omicron (BA.2-like),0.89,0.03,scorpio call: Alt alleles 55; Ref alleles 2; Amb alleles 0; Oth alleles 5,PUSHER-v1.33,4.3.1,0.3.19,v0.1.12,False,pass,Ambiguous_content:0.02,Usher placements: XEC(1/1); scorpio lineage BA.2 conflicts with inference lineage XEC
