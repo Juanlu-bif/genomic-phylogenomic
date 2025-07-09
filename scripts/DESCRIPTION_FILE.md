@@ -2,15 +2,21 @@ En este directorio encontramos los script elaborados en python y bash para lleva
 
 ### 1. **pipecov.sh**
 
+Este script permite la ejecución de la pipeline PipeCoV. Es importante a la hora de ejecutarlo adaptar los directorios y rutas a los archivos para que funcione correctamente.
 
 ### 2. **get_vcf.sh**
 
+Este script nos permite obtener las variantes de la pipeline PipeCoV. Al igual que en el anterior, y que en el resto de scripts, es importante adaptar los directorios y rutas a los archivos. 
+
+En este script se recogen principalmente los parámetros de obtención de variantes utilizados por cada software empleado para esta llamada de variantes.
 
 ### 3. **viralrecon.sh**
 
+Script para llevar a cabo la ejecución de ViralRecon.
 
 ### 4. **vpipe.sh**
 
+Script para llevar a cabo la ejecución de V-pipe. Cabe destacar que en el script viene implementado la creación de los directorios de forma jerárquica para un correcto funcionamiento en la ejecución de la pipeline.
 
 ### 5. **genome_comparison_long.py**
 
@@ -39,7 +45,11 @@ En este directorio encontramos los script elaborados en python y bash para lleva
 
 ### 7. **filter_vcf.sh**
 
+ Script utilizado para llevar a cabo el filtrado de variantes de los archivos vcf obtenidos de las diferentes pipelines. Es importante tener en cuenta a la hora de utilizarlo los directorios y hacer los cambios correspondientes. En el se recogen las condiciones de filtrado utilizadas para los vcf generados por las distintas pipelines.
 
+   Ejecución: Para ejecutarlo es necesario dar a este script permisos de ejecución, activar el entorno conda donde se haya instalado bcftools (en este caso, <biosoftwares>) y posteriormente lanzarlo para que se ejecute.
+
+     `sudo chmod u+x filter_vcf.sh; ./filter_vcf.sh`
 
 ### 8. **vcf_analysis.py**
 
@@ -57,9 +67,7 @@ En este directorio encontramos los script elaborados en python y bash para lleva
 
 ### 9. **filter_vcf.sh**
 
-   Script utilizado para llevar a cabo el filtrado de variantes de los archivos vcf obtenidos de las diferentes pipelines. Es importante tener en cuenta a la hora de utilizarlo los directorios y hacer los cambios correspondientes. En el se recogen las condiciones de filtrado utilizadas para los vcf generados por las distintas pipelines.
-
-   Ejecución: Para ejecutarlo es necesario dar a este script permisos de ejecución, activar el entorno conda donde se haya instalado bcftools (en este caso, <biosoftwares>) y posteriormente lanzarlo para que se ejecute.
+Aplicar de nuevo el misco script que en el paso 7.
 
    `sudo chmod u+x filter_vcf.sh; ./filter_vcf.sh`
 
