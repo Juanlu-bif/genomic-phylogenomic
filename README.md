@@ -128,3 +128,4 @@ La ejecución de iqtree generará varios archivos con diferentes extensiones. El
 El script de ejecución de este proceso se encuentra en la carpeta scripts, denominado como "phylogenomic_tree.sh".
 
 
+#### TODOS LOS RESULTADOS DE GENOMICA, COMPARATIVA, Y FILOGENÓMICA SE ENCUENTRAN EN LA CARPETA "output_file".
