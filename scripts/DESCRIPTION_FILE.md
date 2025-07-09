@@ -1,8 +1,11 @@
 En este directorio encontramos los script elaborados en python y bash para llevar a cabo los diferentes pasos del trabajo, además de recoger las condiciones específicas en las que se ha ejecutado cada paso, es decir, recoge los comandos concretos ejecutados.
+Es importante activar el entorno conda correspondiente antes de llevar a cabo sus lanzamientos.
 
 ### 1. **pipecov.sh**
 
 Este script permite la ejecución de la pipeline PipeCoV. Es importante a la hora de ejecutarlo adaptar los directorios y rutas a los archivos para que funcione correctamente.
+
+No requiere entorno conda.
 
 ### 2. **get_vcf.sh**
 
@@ -10,13 +13,19 @@ Este script nos permite obtener las variantes de la pipeline PipeCoV. Al igual q
 
 En este script se recogen principalmente los parámetros de obtención de variantes utilizados por cada software empleado para esta llamada de variantes.
 
+Entorno conda: biosoftwares
+
 ### 3. **viralrecon.sh**
 
 Script para llevar a cabo la ejecución de ViralRecon.
 
+Entorno conda: viralrecon
+
 ### 4. **vpipe.sh**
 
 Script para llevar a cabo la ejecución de V-pipe. Cabe destacar que en el script viene implementado la creación de los directorios de forma jerárquica para un correcto funcionamiento en la ejecución de la pipeline.
+
+Entorno conda: vpipe
 
 ### 5. **genome_comparison_long.py**
 
@@ -51,6 +60,8 @@ Script para llevar a cabo la ejecución de V-pipe. Cabe destacar que en el scrip
 
      `sudo chmod u+x filter_vcf.sh; ./filter_vcf.sh`
 
+Entorno conda: biosoftwares
+
 ### 8. **vcf_analysis.py**
 
   Para ejecutar este archivo es necesario tener en un mismo directorio el genoma de referencia de la especie (en este caso el SARS-CoV-2) y el archivo de variantes obtenido con cada pipeline (en este caso PipeCoV, V-pipe y Viralrecon).
@@ -65,10 +76,18 @@ Script para llevar a cabo la ejecución de V-pipe. Cabe destacar que en el scrip
   
   En el caso de este script, se utilizó no solo para comparar las variantes, si no para comparar las variantes tras el filtrado de las mismas. Para ello, se filtraron las variantes con el scritp "filter_vcf.sh", concretamente utilizando bcftools filter, y los archivos vcf filtrados se renombraron para que coincidieran con el formato de nombre necesario para la ejecución de este script.
 
+Entorno conda: dataplots
+
 ### 9. **filter_vcf.sh**
 
 Aplicar de nuevo el misco script que en el paso 7.
 
    `sudo chmod u+x filter_vcf.sh; ./filter_vcf.sh`
 
+Entorno conda: biosoftwares 
 
+### 10. **phylogenomic_tree.sh"
+
+Recoge todo el procedimiento de elaboración del árbol filogenético elaborado en el trabajo.
+
+Entorno conda: phylogenomic
