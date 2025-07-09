@@ -129,3 +129,4 @@ El script de ejecución de este proceso se encuentra en la carpeta scripts, deno
 
 
 #### TODOS LOS RESULTADOS DE GENOMICA, COMPARATIVA, Y FILOGENÓMICA SE ENCUENTRAN EN LA CARPETA "output_file".
+#### CUALQUIER DETALLE DEL TRABAJO SE PODRÁ CONSULTAR EN LA MEMORIA DEL TRABAJO ENCONTRADA EN EL REPOSITORIO PRINCIPAL COMO "Memoria_Trabajo.docx" Y "Memoria_trabajo.html".
